@@ -29,6 +29,7 @@ async def call_model_with_handling(
         model = create_model(model_settings)
         chain = LLMChain(llm=model, prompt=prompt)
         print('prompt', prompt)
+        print('model', model)
         return await chain.arun(args)
     except ServiceUnavailableError as e:
         raise OpenAIError(
