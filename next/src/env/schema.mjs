@@ -60,7 +60,7 @@ export const serverEnv = {
 export const clientSchema = z.object({
   NEXT_PUBLIC_VERCEL_ENV: z.enum(["production", "preview", "development"]).default("development"),
   NEXT_PUBLIC_FF_MOCK_MODE_ENABLED: stringToBoolean(),
-  NEXT_PUBLIC_VERCEL_URL: z.string().default("http://localhost:3000"),
+  NEXT_PUBLIC_VERCEL_URL: z.string().default("http://43.153.111.67:3000"),
   NEXT_PUBLIC_BACKEND_URL: z.string().url(),
   NEXT_PUBLIC_MAX_LOOPS: z.coerce.number().default(25),
 });

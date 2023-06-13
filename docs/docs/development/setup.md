@@ -92,7 +92,7 @@ poetry run python -m reworkd_platform
 
 ## Running the site
 
-After you have locally built AgentGPT, you can travel to http://localhost:3000/ in your web browser.
+After you have locally built AgentGPT, you can travel to http://43.153.111.67:3000/ in your web browser.
 
 ## Issues / Additional help
 
