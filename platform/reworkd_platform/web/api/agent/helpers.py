@@ -27,7 +27,7 @@ async def call_model_with_handling(
     try:
         print('model_settings', model_settings)
         model = create_model(model_settings)
-        chain = LLMChain(llm=model, prompt=prompt)
+        chain = LLMChain(llm=model, prompt='你好')
         print('prompt', prompt)
         print('model', model)
         return await chain.arun(args)
