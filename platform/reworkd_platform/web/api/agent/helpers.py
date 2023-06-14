@@ -29,6 +29,7 @@ async def call_model_with_handling(
         model = create_model(model_settings)
         chain = LLMChain(llm=model, prompt=prompt)
         print('prompt', prompt)
+        print('args', args)
         return await chain.arun(args)
     except ServiceUnavailableError as e:
         raise OpenAIError(
@@ -44,6 +45,7 @@ async def call_model_with_handling(
             )
         raise OpenAIError(e, e.user_message)
     except AuthenticationError as e:
+        print('e', e)
         raise OpenAIError(
             e,
             "Authentication error: Ensure the correct API key and "
