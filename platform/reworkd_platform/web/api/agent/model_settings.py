@@ -10,7 +10,7 @@ openai.api_base = settings.openai_api_base
 
 def create_model(model_settings: ModelSettings, streaming: bool = False) -> ChatOpenAI:
     return ChatOpenAI(
-        openai_api_key='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',
+        openai_api_key='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',
         temperature=model_settings.temperature,
         model=model_settings.model,
         max_tokens=model_settings.max_tokens,
